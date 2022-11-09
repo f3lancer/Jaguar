@@ -7,6 +7,21 @@ const swiper = new Swiper('.whatlike__swiper', {
 
 });
 
+
+const anchrs = document.querySelectorAll('a[href*="#"]');
+// console.log(anchrs);
+
+for (let anchor of anchrs) {
+    anchor.addEventListener("click", function (event) {
+        event.preventDefault();
+        const BlockID = anchor.getAttribute('href')
+        document.querySelector('' + BlockID).scrollIntoView({
+            behavior: "smooth"
+            // block: "start"
+        })
+    })
+}
+
 let menulinck = document.querySelectorAll('.header__items');
 
 if (menulinck) {
