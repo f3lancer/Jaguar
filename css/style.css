@@ -734,8 +734,13 @@ h3 {
     align-items: center;
     gap: 60px;
     margin-bottom: 140px;
+    position: relative;
 }
 
+.betterwork__ancher{ 
+    position: absolute;
+    top: -120px;
+}
 
 .flayers-items__covering {
     display: flex;
@@ -990,16 +995,19 @@ h2{
 /* ====================опис роботи=========================== */
 
 .optionswork__container {
-    margin-bottom: 140px;
-    /* padding-top: 60px; */
+    margin-bottom: 140px; 
     padding-bottom: 60px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     gap: 15px;
     align-items: center;
+    position: relative;
 }
-
+.optionswork__anher{
+position: absolute;
+top: -110px;
+}
 
 .optionswork__content {
     flex: 0 1 48%;
@@ -1056,6 +1064,8 @@ h2{
     flex: 0 1 48%;
     height: 450px;
     overflow: hidden;
+    
+    border-radius: 10px;
 }
 
 .optionswork__img img {
@@ -1078,14 +1088,20 @@ h2{
 
 
     .optionswork__container{
-        flex-direction: column;
+        /* flex-direction: column; */
         margin-bottom: 60px;
     }
     .optionswork__img img{
         position: unset;
     }
 } 
-/* @media (max-width: 990.98px) {} */  
+@media (max-width: 990.98px) {
+
+    .optionswork__container{ 
+        flex-direction: column;
+        /* margin-bottom: 30px; */
+    }
+}  
 @media (max-width: 767.98px) {
 
     .optionswork__title,.optionswork__texttitle{
@@ -1093,6 +1109,7 @@ h2{
 
     }
     .optionswork__container{ 
+        /* flex-direction: column; */
         margin-bottom: 30px;
     }
 }
@@ -1172,9 +1189,13 @@ h2{
     padding-top: 76px;
     padding-bottom: 76px;
     margin-bottom: 140px;
+    position: relative;
 
 }
-
+.callback__ancher{
+position: absolute;
+top: -95px;
+}
 .callback__title {
     text-align: center;
     margin-bottom: 50px;
