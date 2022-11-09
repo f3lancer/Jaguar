@@ -26,11 +26,8 @@ function removeActiveMenu(number) {
         }
     }
 }
-
 let CloseMobail = document.querySelector('.menu-mobail__close');
 let MobailMenu = document.querySelector('.header');
-
-
 
 if (CloseMobail) {
     CloseMobail.onclick = function () {
@@ -40,8 +37,39 @@ if (CloseMobail) {
 
 function closeMenu() {
     if (CloseMobail) {
-
         MobailMenu.classList.remove('active')
+    }
+}
+
+let oldImg = document.querySelectorAll('.whatlike__swip-img img');
+
+window.onresize = () => {
+    if (innerWidth < 768) {
+        for (let i = 0; i < oldImg.length; i++) {
+            newImg = oldImg[i].src.replace('UA.png', 'UAt.png');
+            oldImg[i].src = newImg;
+
+        }
+    }
+    if (innerWidth > 768) {
+        for (let i = 0; i < oldImg.length; i++) {
+            newImg = oldImg[i].src.replace('UAt.png', 'UA.png');
+            oldImg[i].src = newImg;
+
+        }
+    }
+}
+if (innerWidth < 768) {
+    for (let i = 0; i < oldImg.length; i++) {
+        newImg = oldImg[i].src.replace('UA.png', 'UAt.png');
+        oldImg[i].src = newImg;
+
+    }
+}
+if (innerWidth > 768) {
+    for (let i = 0; i < oldImg.length; i++) {
+        newImg = oldImg[i].src.replace('UAt.png', 'UA.png');
+        oldImg[i].src = newImg;
 
     }
 }
